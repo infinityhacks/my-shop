@@ -7,7 +7,7 @@ class User < ApplicationRecord
   validates_format_of :email, message: "邮箱格式不合法",
     with: /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/,
     if: proc { |user| !user.email.blank? }
-  validates :email, uniqueness: true
+  validates :email, uniqueness: { scope: :email, message: "此邮箱已被注册,请更换注册邮箱" }
 
   validates_presence_of :password, message: "密码不能为空",
     if: :need_validate_password
