@@ -1,4 +1,5 @@
 class CreateProducts < ActiveRecord::Migration[5.0]
+  #商品表
   def change
     create_table :products do |t|
       t.integer :category_id, comment: "外键"
