@@ -16,6 +16,12 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'byebug', platform: :mri
+
+
+  gem 'database_cleaner', '~> 1.5.3'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+
 end
 group :development do
   gem 'web-console', '>= 3.3.0'
