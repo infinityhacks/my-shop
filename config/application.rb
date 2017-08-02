@@ -19,6 +19,8 @@ module MyShop
     config.generators do |generator|
       generator.assets false
       generator.test_framework false
+      #在使用generator的时候默认不让rails对路由进行修改
+      generator.skip_routes true
     end
   end
 end
