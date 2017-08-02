@@ -27,3 +27,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'sorcery'
+#自身关联/自分类/继承
+gem 'ancestry'
