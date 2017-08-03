@@ -35,3 +35,5 @@ gem 'font-awesome-rails'
 gem 'sorcery'
 #自身关联/自分类/继承
 gem 'ancestry'
+#分页
+gem 'will_paginate'
