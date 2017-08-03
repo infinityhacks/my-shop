@@ -8,7 +8,6 @@ class Product < ApplicationRecord
   private
   def set_default_attrs
     self.uuid = RandomCode.generate_product_uuid
-
   end
 
 end
