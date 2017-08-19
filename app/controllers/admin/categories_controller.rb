@@ -20,4 +20,9 @@ class Admin::CategoriesController < Admin::BaseController
       render action: :new
     end
   end
+
+  def edit
+
+
+  end
 end
