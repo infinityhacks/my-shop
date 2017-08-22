@@ -22,7 +22,21 @@ class Admin::CategoriesController < Admin::BaseController
   end
 
   def edit
+    @category = Category.find(params[:id])
+    @root_categories = Category.roots.order(id: "desc")
+    render action: :new
+  end
 
+  def update
+    @category = Category.find params[:id]
+    @category.attributes = params.require(:category).permit!
+    if @category.save
+      flash[:notice] = "修改成功"
+      redirect_to admin_categories_path
+    else
+      render action: :new
+    end
 
   end
+
 end
