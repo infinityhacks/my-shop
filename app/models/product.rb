@@ -18,7 +18,8 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
-  has_many :product_images
+  has_many :product_images, -> { order(weight: 'desc')}, # -> 指定参数，order排序，根据weight 倒序排列
+    dependent: :destroy #dependent 做了级联删除,如果父类被删除了，父类下所属的子类图片也都被删除了。
 
   before_create :set_default_attrs
 
