@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
 
+
+
   validates :category_id, presence: { message: "分类不能为空" }
   validates :title, presence: { message: "名称不能为空" }
   validates :status, inclusion: { in: %w[on off], message: "商品状态必须为on|off"}
@@ -16,7 +18,15 @@ class Product < ApplicationRecord
 
   belongs_to :category
 
+  has_many :product_images
+
   before_create :set_default_attrs
+
+
+  module Status
+    On = 'on'
+    Off = 'off'
+  end
 
 
   private

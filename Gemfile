@@ -37,3 +37,6 @@ gem 'sorcery'
 gem 'ancestry'
 #分页
 gem 'will_paginate'
+#图片管理的gem
+#官网： https://github.com/thoughtbot/paperclip
+gem 'paperclip', '~> 5.0.0'
