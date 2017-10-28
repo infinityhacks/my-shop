@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     #login这个方法是sorcery提供的，不仅仅是可以登录，顺便也
     #帮我们设置好了session,登录的用户信息也已经保存到了浏览器
     if user = login(params[:email], params[:password])
+      update_browser_uuid user.uuid
       flash[:notice] = "登录成功"
       redirect_to root_path
     else
