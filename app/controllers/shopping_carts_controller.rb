@@ -6,5 +6,4 @@ class ShoppingCartsController < ApplicationController
     .order("id desc").includes([:product=>[:main_product_image]])
   end
 
-
 end
